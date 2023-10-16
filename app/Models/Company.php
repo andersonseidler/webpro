@@ -27,16 +27,16 @@ class Company extends Model
 
     public function getBusca(string|null $estabelecimento = null, string|null $localizacao = null){
 
-        $cat = $this->where(function ($query) use ($estabelecimento, $localizacao) {
+        $companies = $this->where(function ($query) use ($estabelecimento, $localizacao) {
             if($estabelecimento){
-                $query->where('nome', $colaborador);
+                $query->where('nome', 'LIKE', "%{$estabelecimento}%");
             }
-            if($doculocalizacaomento){
-                $query->where('cidade', $localizacao);
+            if($localizacao){
+                $query->where('cidade', 'LIKE', "%{$localizacao}%");
             }
         })->paginate(10);
 
-        return $cat;
+        return $companies;
     }
 
 }

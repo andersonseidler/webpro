@@ -19,15 +19,16 @@ class SearchController extends Controller
     public function index(Request $request){
 
         //dd($request);
-        $search = $request->search;
-        dd($search);
+        //$estabelecimento = $request->estabelecimento;
+        //localizacao = $request->localizacao;
+        //dd($search);
         $companies = $this->model->getBusca(estabelecimento: $request->estabelecimento, localizacao: $request->localizacao ?? '');
-        
+        //dd($companies);
         $title = 'Excluir!';
         $text = "Deseja excluir essa categoria?";
         confirmDelete($title, $text);
         //dd($cats);
-        return view('category.index', compact('companies'));
+        return view('search.index', compact('companies'));
     }
 
 
