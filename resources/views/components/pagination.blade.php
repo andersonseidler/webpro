@@ -1,23 +1,18 @@
+
 @if ($paginator->hasPages())
-
-
-<div class="col-sm-12 col-md-7">
-<div class="dataTables_paginate paging_simple_numbers">
-    <ul class="pagination pagination-rounded">
-        {{-- Previous Page Link --}}
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+    
+      {{-- Previous Page Link --}}
         @if ($paginator->onFirstPage() )
-            <li class="paginate_button page-item previous disabled">
-                <a href="#" class="page-link">
-                    <i class="mdi mdi-chevron-left"></i>
-                </a>
-            </li>
+      <li class="page-item disabled">
+          <a href="#" class="page-link">Anterior</a>
+      </li>
         @else
-            <li class="paginate_button page-item previous">
-                <a href="{{ $paginator->previousPageUrl() }}" class="page-link">
-                    <i class="mdi mdi-chevron-left"></i>
-                </a>
-            </li>
-        @endif
+        <li class="page-item">
+            <a href="{{ $paginator->previousPageUrl() }}" class="page-link">Anterior</a>
+        </li>
+        @endif 
 
         {{-- Pagination Elements --}}
         @foreach ($elements as $element)
@@ -30,11 +25,11 @@
             @if (is_array($element))
                 @foreach ($element as $page => $url)
                     @if ($page == $paginator->currentPage())
-                        <li class="paginate_button page-item active">
+                        <li class="page-item active">
                             <a class="page-link">{{ $page }}</a>
                         </li>
                     @else
-                        <li class="paginate_button page-item ">
+                        <li class="page-item ">
                             <a class="page-link" href="{{ $url }}">{{ $page }}</a>
                         </li>
                     @endif
@@ -45,18 +40,15 @@
         {{-- Next Page Link --}}
         @if ($paginator->hasMorePages())
             <li>
-                <a href="{{ $paginator->nextPageUrl() }}" class="page-link">
-                    <i class="mdi mdi-chevron-right"></i>
-                </a>
+                <a href="{{ $paginator->nextPageUrl() }}" class="page-link">Pŕoximo</a>
             </li>
         @else
-            <li class="paginate_button page-item next disabled">
-                <a  class="page-link">
-                    <i class="mdi mdi-chevron-right"></i>
-                </a>
+            <li class="page-item disabled">
+                <a  class="page-link">Pŕoximo</a>
             </li>
         @endif
+
+
     </ul>
-</div>
-</div>
-@endif
+  </nav>
+  @endif
