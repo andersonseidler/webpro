@@ -13,6 +13,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
         <!-- Bootstrap icons-->
+        <script src="https://kit.fontawesome.com/6c4df5f46b.js" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{ 'front/css/styles.css' }}" rel="stylesheet" />
@@ -28,7 +29,6 @@
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
                             <li class="nav-item"><a class="nav-link" href="/">Início</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
                             <li class="nav-item"><a class="nav-link" href="login"><span class="fw-bolder text-primary">Login</span></a></li>
                         </ul>
                     </div>
@@ -47,7 +47,7 @@
                                 <div class="input-group mb-3">
                                     <input type="text" class="form-control" name="estabelecimento" placeholder="Estabelecimento">
                                     <input type="text" class="form-control" name="localizacao" placeholder="Localização">
-                                    <button class="btn btn-outline-primary" type="submit" id="button-addon2">Button</button>
+                                    <button class="btn btn-outline-primary" type="submit" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
                                   </div>
                             </div>
                         </form>

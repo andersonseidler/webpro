@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreUpdateUserFormRequest;
 use App\Models\User;
+//use App\Models\Company;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -20,12 +21,11 @@ class UserController extends Controller
     public function index(Request $request){
         
         $search = $request->search;
-        
-        $users = $this->model->getUsers(search: $request->search ?? '');
-
-        $title = 'Excluir!';
-        $text = "Deseja excluir esse usuário?";
-        confirmDelete($title, $text);
+        //dd($search);
+        $infoUser = auth()->user();
+        //$users = $this->model->getUsers(search: $request->search ?? '');
+        $users = User::where('id', $infoUser->id)->first();
+        //dd($users);
 
         return view('users.index', compact('users'));
     }
@@ -91,7 +91,7 @@ class UserController extends Controller
         if($this->model->create($data)){
             /* session()->flash('success', 'Usuário cadastrado com sucesso!'); */
             alert()->success('Usuário cadastrado com sucesso!');
-            return redirect()->route('users.index');
+            //return redirect()->route('users.index');
         }
     }
     
@@ -118,6 +118,7 @@ class UserController extends Controller
         }
 
         if($request->image){
+            //dd($request->image);
             $extension = $request->image->getClientOriginalExtension();
             $data['image'] = $request->image->storeAs("usuarios/{$request->name}/foto", $request->name . ".{$extension}");
         }

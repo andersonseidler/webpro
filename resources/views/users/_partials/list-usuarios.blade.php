@@ -14,29 +14,28 @@
                         </tr>
                     </thead>
                     <tbody id="table-body">
-                        @foreach ($users as $user)
-                        <tr data-user-id="{{ $user->id }}">
+                        <tr>
                             <td class="table-user">
-                                @if($user->image)
-                                    <img src="{{ url("storage/{$user->image}") }}" class="me-2 rounded-circle">
+                                @if($users->image)
+                                    <img src="{{ url("storage/{$users->image}") }}" class="me-2 rounded-circle">
                                 @else
                                 <img src="{{ url("assets/img/icon_user.png") }}" class="me-2 rounded-circle">
                                 @endif
-                                {{ $user->name }}
+                                {{ $users->name }}
                             </td>
-                            <td>{{ $user->email }}</td>
-                            <td>{{ $user->telefone }}</td>
-                            <td>{{ $user->perfil }}</td>
+                            <td>{{ $users->email }}</td>
+                            <td>{{ $users->telefone }}</td>
+                            <td>{{ $users->perfil }}</td>
                             <td class="table-action">
 
-                                <a href="{{ route('users.edit', $user->id) }}"
+                                <a href="{{ route('users.edit', $users->id) }}"
                                     data-bs-toggle="tooltip"
                                     data-bs-target="#standard-modal-edit"
                                     class="font-18 text-info me-2"
                                     data-bs-placement="top"
                                     aria-label="Edit"
                                     data-bs-original-title="Editar"><i class="uil uil-pen"></i></a>
-                                <a href="{{ route('users.destroy', $user->id) }}"
+                                <a href="{{ route('users.destroy', $users->id) }}"
                                     class="mdi mdi-delete font-18 text-danger" 
                                     data-bs-toggle="tooltip"
                                     data-bs-placement="top"
@@ -44,16 +43,9 @@
                                     data-bs-original-title="Excluír" data-confirm-delete="true"></a>
                             </td>
                         </tr>
-                        @endforeach
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-</div>
-<br>
-<div class="row">
-    {{ $users->appends([
-        'search' => request()->get('search', '')
-    ])->links('components.pagination') }}
 </div>

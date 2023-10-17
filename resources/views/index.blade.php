@@ -16,6 +16,12 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{ 'front/css/styles.css' }}" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/6c4df5f46b.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.22.0/autocomplete.jquery.min.js" integrity="sha512-sYSJW8c3t/hT4R6toey7NwQmlrPMTqvDk10hsoD8oaeXUZRexAzrmpp5kVlTfy6Ru7b1+Tte2qBrRE7FOX1vgA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
     </head>
     <body class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
@@ -28,7 +34,6 @@
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
                             <li class="nav-item"><a class="nav-link" href="/">Início</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
                             <li class="nav-item"><a class="nav-link" href="login"><span class="fw-bolder text-primary">Login</span></a></li>
                         </ul>
                     </div>
@@ -47,7 +52,7 @@
                                 <div class="input-group mb-3">
                                     <input type="text" class="form-control" name="estabelecimento" placeholder="Estabelecimento">
                                     <input type="text" class="form-control" name="localizacao" placeholder="Localização">
-                                    <button class="btn btn-outline-primary" type="submit" id="button-addon2">Button</button>
+                                    <button class="btn btn-outline-primary" type="submit" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i></button>
                                   </div>
                             </div>
                         </form>
@@ -66,7 +71,7 @@
                                 <div class="fs-3 fw-light text-muted">O portal chegou para facilitar o gerenciamento do seu negócio</div>
                                 <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">Portal Barber</span></h1>
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
-                                    <a class="btn btn-outline-primary btn-lg px-5 py-3 fs-6 fw-bolder" href="projects.html">Cadastrar</a>
+                                    <a class="btn btn-outline-primary btn-lg px-5 py-3 fs-6 fw-bolder" href="register">Cadastrar</a>
                                     <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="projects.html">Entrar</a>
                                 </div>
                             </div>

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('telefone');
             $table->string('celular');
             $table->string('foto');
+            $table->string('id_user');
             $table->timestamps();
         });
     }

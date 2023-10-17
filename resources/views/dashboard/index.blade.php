@@ -70,8 +70,8 @@
                                     <div class="card-body">
                                         <div class="row align-items-center">
                                             <div class="col-6">
-                                                <h5 class="text-muted fw-normal mt-0 text-truncate" title="Campaign Sent">Adiantamentos enviados</h5>
-                                                <h3 class="my-2 py-1">9,184</h3>
+                                                <h5 class="text-muted fw-normal mt-0 text-truncate" title="Campaign Sent">{{-- {{ $infos->nome }} --}}</h5>
+                                                <h3 class="my-2 py-1"></h3>
                                                 <p class="mb-0 text-muted">
                                                     <span class="text-success me-2"><i class="mdi mdi-arrow-up-bold"></i> 3.27%</span>
                                                 </p>
@@ -211,7 +211,7 @@
                                     <div class="card-header d-flex justify-content-between align-items-center">
                                         <h4 class="header-title">Últimos emprestimos</h4>
                                     </div>
-                                    @if ($emprestimos)
+                                    {{-- @if ($emprestimos)
                                     <div class="card-body pt-2">
                                         <div class="table-responsive">
                                             <table class="table table-centered table-nowrap table-hover mb-0">
@@ -249,7 +249,7 @@
                                         <div class="alert alert-warning" role="alert">
                                             NENHUM RESULTADO ENCONTRADO!
                                         </div>
-                                    @endif
+                                    @endif --}}
                                 </div> <!-- end card -->
                                 <!-- end card -->
                             </div>

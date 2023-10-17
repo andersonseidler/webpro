@@ -34,7 +34,7 @@ class Company extends Model
             if($localizacao){
                 $query->where('cidade', 'LIKE', "%{$localizacao}%");
             }
-        })->paginate(10);
+        })->paginate(9);
 
         return $companies;
     }

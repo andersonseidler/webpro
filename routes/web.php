@@ -111,6 +111,7 @@ Route::get('/api', [ApiController::class, 'index']);
     return view('auth.login');
 }); */
 Route::get('/search', [SearchController::class, 'index'])->name('search.index');
+
 Route::get('/', function () {
     return view('index');
 });

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\DashModel;
 use Illuminate\Http\Request;
-use App\Models\Emprestimo;
+use App\Models\Company;
 class DashController extends Controller
 {
     protected $model;
@@ -17,14 +17,12 @@ class DashController extends Controller
     public function index(Request $request){
 
         
-
-        $search = $request->search;
-        $emprestimos = Emprestimo::take(5)->get();
-        //$users = $this->model->getUsersDash();
-        $countAd = $this->model->getCountAdDash();
-        //dd($emprestimos);
+        $user= auth()->user();
         
-        //dd($users);
-        return view('dashboard.index', compact(['countAd','emprestimos']));
+        $search = $request->search;
+        
+        $infos = Company::where('id_user', $user->id)->first();
+        
+        return view('dashboard.index');
     }
 }
