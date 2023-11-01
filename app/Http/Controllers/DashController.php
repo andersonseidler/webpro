@@ -17,11 +17,11 @@ class DashController extends Controller
     public function index(Request $request){
 
         
-        $user= auth()->user();
+        //$user= auth()->user();
         
-        $search = $request->search;
+        //$search = $request->search;
         
-        $infos = Company::where('id_user', $user->id)->first();
+        //infos = Company::where('id_user', $user->id)->first();
         
         return view('dashboard.index');
     }

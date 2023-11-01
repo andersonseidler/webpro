@@ -112,7 +112,7 @@
                                 <!-- To make this form functional, sign up at-->
                                 <!-- https://startbootstrap.com/solution/contact-forms-->
                                 <!-- to get an API token!-->
-                                <form action="{{ route('register') }}" method="POST" class="form-horizontal">
+                                <form action="{{ route('registerEmpresa') }}" method="POST" class="form-horizontal">
                                     @csrf
                                     <!-- Name input-->
                                     <div class="form-floating mb-3">

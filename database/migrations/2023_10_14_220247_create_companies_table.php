@@ -16,10 +16,11 @@ return new class extends Migration
             $table->string('nome');
             $table->string('endereco');
             $table->string('cidade');
-            $table->string('telefone');
-            $table->string('celular');
-            $table->string('foto');
-            $table->string('id_user');
+            $table->string('telefone')->nullable();
+            $table->string('celular')->nullable();
+            $table->string('foto')->nullable();
+            $table->string('status')->nullable();
+            $table->string('comp_id')->nullable();
             $table->timestamps();
         });
     }

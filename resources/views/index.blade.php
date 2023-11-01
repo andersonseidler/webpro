@@ -71,8 +71,8 @@
                                 <div class="fs-3 fw-light text-muted">O portal chegou para facilitar o gerenciamento do seu negócio</div>
                                 <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">Portal Barber</span></h1>
                                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
-                                    <a class="btn btn-outline-primary btn-lg px-5 py-3 fs-6 fw-bolder" href="register">Cadastrar</a>
-                                    <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="projects.html">Entrar</a>
+                                    <a class="btn btn-outline-primary btn-lg px-5 py-3 fs-6 fw-bolder" href="{{ route('register.create')}}">Cadastrar</a>
+                                    <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="login">Entrar</a>
                                 </div>
                             </div>
                         </div>
@@ -207,6 +207,17 @@
         <!-- Footer-->
         @include('components.footer-site')
         <!-- Bootstrap core JS-->
+        <script>
+            // Verifique se há uma mensagem de sucesso na sessão flash
+            @if(session('success'))
+                // Exiba o SweetAlert de sucesso
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Sucesso',
+                    text: '{{ session('success') }}'
+                });
+            @endif
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
     </body>

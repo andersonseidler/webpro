@@ -14,6 +14,8 @@ use App\Http\Controllers\DashController;
 use App\Http\Controllers\CalendarController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\RegisterCompanyController;
+use App\Http\Controllers\TenantController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -103,6 +105,11 @@ Route::middleware(['auth'])->group(function () {
 
 
     Route::get('/calendar', [CalendarController::class, 'index'])->name('calendar.index');
+
+
+    Route::get('/company/create', [TenantController::class, 'create'])->name('company.create');
+    Route::get('/company', [TenantController::class, 'index'])->name('company.index');
+    Route::post('/company', [TenantController::class, 'store'])->name('company.store');
 });
 
 Route::get('/api', [ApiController::class, 'index']);
@@ -112,8 +119,13 @@ Route::get('/api', [ApiController::class, 'index']);
 }); */
 Route::get('/search', [SearchController::class, 'index'])->name('search.index');
 
+Route::get('/registerEmpresa/create', [RegisterCompanyController::class, 'create'])->name('register.create');
+Route::get('/registerEmpresa', [RegisterCompanyController::class, 'index'])->name('register.index');
+Route::post('/registerEmpresa', [RegisterCompanyController::class, 'store'])->name('register.store');
+
 Route::get('/', function () {
     return view('index');
 });
+
 
 require __DIR__.'/auth.php';

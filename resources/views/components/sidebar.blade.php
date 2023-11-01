@@ -52,7 +52,7 @@
                 </a>
             </li>
 
-            <li class="side-nav-item">
+            {{-- <li class="side-nav-item">
                 <a href="{{ route('pagamento.index') }}" class="side-nav-link">
                     <i class="uil-dollar-alt"></i>
                     <span> Salário </span>
@@ -71,7 +71,7 @@
                     <i class="uil-comments-alt"></i>
                     <span> Documentos </span>
                 </a>
-            </li>
+            </li> --}}
 
 
             <li class="side-nav-item">
@@ -82,7 +82,7 @@
                 </a>
                 <div class="collapse" id="sidebarLayouts">
                     <ul class="side-nav-second-level">
-                        <li>
+                        {{-- <li>
                             <a href="{{ route('employees.index') }}">Colaboradores</a>
                         </li>
                         <li>
@@ -90,9 +90,12 @@
                         </li>
                         <li>
                             <a href="{{ route('subcategory.index') }}">Subcategorias</a>
-                        </li>
+                        </li> --}}
                         <li>
                             <a href="{{ route('users.index') }}">Usuários</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('company.index') }}">Empresas</a>
                         </li>
                     </ul>
                 </div>

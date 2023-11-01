@@ -24,7 +24,8 @@ class CompanyFactory extends Factory
             'telefone' => fake()->phoneNumber(),
             'celular' => fake()->phoneNumber(), // password
             'foto' => 'images/foto.png',
-            'id_user' => '1',
+            'status' => 'Ativo',
+            'comp_id' => '1',
         ];
     }
 

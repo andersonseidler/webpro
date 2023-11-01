@@ -25,18 +25,15 @@ class Company extends Model
         'foto',
     ];
 
-    public function getBusca(string|null $estabelecimento = null, string|null $localizacao = null){
+    public function getEmpresa(string|null $search = null){
 
-        $companies = $this->where(function ($query) use ($estabelecimento, $localizacao) {
-            if($estabelecimento){
-                $query->where('nome', 'LIKE', "%{$estabelecimento}%");
+        $users = $this->where(function ($query) use ($search) {
+            if($search){
+                $query->where('nome', 'LIKE', "%{$search}%");
             }
-            if($localizacao){
-                $query->where('cidade', 'LIKE', "%{$localizacao}%");
-            }
-        })->paginate(9);
-
-        return $companies;
+        })->paginate(10);
+        //dd($users);
+        return $users;
     }
 
 }
