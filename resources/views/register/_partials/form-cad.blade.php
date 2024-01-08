@@ -1,33 +1,49 @@
 <div class="col-sm-8  mx-auto">
 
 
-    <label for="firstName" class="form-label">Subdomínio</label>
+    
+    
+    
+
+    <label for="firstName" class="form-label">Nome: <span style="color:red;">*</span></label>
     <div class="input-group mb-3">
-      <input type="text" class="form-control" name="domain">
-      <span class="input-group-text">laradoc.test</span>
+      <input type="text" class="form-control" name="nome" >
     </div>
     
-    <hr class="my-4">
-
-    <label for="firstName" class="form-label">Nome</label>
-    <div class="input-group mb-3">
-      <input type="text" class="form-control" name="nome">
-    </div>
-
-    <label for="firstName" class="form-label">Email</label>
+    <label for="firstName" class="form-label">Email <span style="color:red;">*</span></label>
     <div class="input-group mb-3">
       <input type="text" class="form-control" name="email">
     </div>
 
-    <label for="firstName" class="form-label">Senha</label>
+    <label for="firstName" class="form-label">Senha <span style="color:red;">*</span></label>
     <div class="input-group mb-3">
       <input type="text" class="form-control" name="password">
     </div>
 
-    <label for="firstName" class="form-label">Confirmar senha</label>
+    <label for="firstName" class="form-label">Confirmar senha <span style="color:red;">*</span></label>
     <div class="input-group mb-3">
       <input type="text" class="form-control" name="password_confirm">
     </div>
+    <hr class="my-4">
+    <label for="firstName" class="form-label">Nome do seu negócio <span style="color:red;">*</span></label>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" name="domain" id="inputCampo">
+      <span class="input-group-text">laradoc.test</span>
+    </div>
+    <script>
+      document.getElementById('inputCampo').addEventListener('input', function(event) {
+        // Obtém o valor atual do campo de entrada
+        var valorCampo = event.target.value;
+  
+        // Remove espaços em branco do valor atual
+        var valorSemEspacos = valorCampo.replace(/\s/g, '');
+  
+        // Se o valor sem espaços for diferente do valor atual, atualiza o campo
+        if (valorCampo !== valorSemEspacos) {
+          event.target.value = valorSemEspacos;
+        }
+      });
+    </script>
     <button class="w-100 btn btn-primary btn-lg" type="submit">Cadastrar</button>
 </div>
 {{-- <div class="row g-5">

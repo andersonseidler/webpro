@@ -119,9 +119,9 @@ Route::get('/api', [ApiController::class, 'index']);
 }); */
 Route::get('/search', [SearchController::class, 'index'])->name('search.index');
 
-Route::get('/registerEmpresa/create', [RegisterCompanyController::class, 'create'])->name('register.create');
-Route::get('/registerEmpresa', [RegisterCompanyController::class, 'index'])->name('register.index');
-Route::post('/registerEmpresa', [RegisterCompanyController::class, 'store'])->name('register.store');
+Route::get('/registerCompany', [RegisterCompanyController::class, 'index'])->name('register.index');
+Route::get('/registerCompany/create', [RegisterCompanyController::class, 'create'])->name('register.create');
+Route::post('/registerCompany', [RegisterCompanyController::class, 'store'])->name('register.store');
 
 Route::get('/', function () {
     return view('index');

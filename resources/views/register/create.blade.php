@@ -40,6 +40,7 @@
                 </div>
             </nav>
             @include('sweetalert::alert')
+            
             <!-- BUSCA ESTABELECIMENTO -->
             <section class="py-5">
                 <div class="container px-5">
@@ -47,10 +48,19 @@
                     <div class="bg-light rounded-4 py-5 px-4 px-md-5">
                         <div class="text-center mb-5">
                             <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="fa-solid fa-shop"></i></div>
-                            <p class="lead fw-normal text-muted mb-0">Cadastre seu negócio!</p>
+                            <p class="lead fw-normal text-muted mb-0">Cadastre o seu negócio!</p>
                         </div>
                         <div class="row gx-5 justify-content-center">
                             <div class="col-lg-12 col-xl-12">
+                                @if(session('success'))
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                                @elseif(session('error'))
+                                <div class="alert alert-danger">
+                                    {{ session('error') }}
+                                </div>
+                            @endif
                                 <form action="{{ route('register.store') }}" method="POST" enctype="multipart/form-data" id="idFormUser" class="form-horizontal">
                                     @csrf
                                     @include('register._partials.form-cad')
