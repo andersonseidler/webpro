@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Search;
+//use App\Models\Search;
 use App\Models\Company;
 
 class SearchController extends Controller
@@ -22,7 +22,7 @@ class SearchController extends Controller
         //$estabelecimento = $request->estabelecimento;
         //localizacao = $request->localizacao;
         //dd($search);
-        $companies = $this->model->getBusca(estabelecimento: $request->estabelecimento, localizacao: $request->localizacao ?? '');
+        $companies = $this->model->getEmpresa(estabelecimento: $request->estabelecimento, localizacao: $request->localizacao ?? '');
         //dd($companies);
         $title = 'Excluir!';
         $text = "Deseja excluir essa categoria?";
