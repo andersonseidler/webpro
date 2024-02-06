@@ -71,13 +71,10 @@
                     </div> <!-- end row -->
                     <br>
 
-
-                    
                     <div class="row">
                         <div class="col-lg-6">
                         </div>
                         <div class="col-lg-6 text-end">
-                            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancelar</button>
                         <button type="button" onclick="form.reset();" class="btn btn-warning btn-sm">Limpar</button>
                         <button type="submit" class="btn btn-success btn-sm">Cadastrar</button>
                         </div>

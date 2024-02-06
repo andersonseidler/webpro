@@ -7,7 +7,7 @@
                 <!-- Logo light -->
                 <a href="index.html" class="logo-light">
                     <span class="logo-lg">
-                        <img src="{{ url('assets/images/logo.png') }}" alt="logo">
+                        <img src="{{ url('assets/images/logo-wp.png') }}" alt="logo">
                     </span>
                     <span class="logo-sm">
                         <img src="{{ url('assets/images/logo-sm.png') }}" alt="small logo">
