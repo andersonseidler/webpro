@@ -18,6 +18,7 @@ yarn-error.log
 /.idea
 /.vscode
 .docker
+
 # SQL Server files
 *.mdf
 *.ldf
