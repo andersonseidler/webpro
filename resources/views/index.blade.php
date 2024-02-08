@@ -48,6 +48,16 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ url('images/icons/favicon-16x16.png') }}">
     <link rel="icon" href="{{ url('images/icons/favicon.ico') }}">
     <!-- Alteração testes -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16447176304">
+    </script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-16447176304');
+    </script>
 </head>
 
 
