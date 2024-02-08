@@ -19,7 +19,7 @@ yarn-error.log
 /.vscode
 .docker
 docker-compose.yml
-#/config/tenancy.php
+/config/tenancy.php
 # SQL Server files
 *.mdf
 *.ldf
