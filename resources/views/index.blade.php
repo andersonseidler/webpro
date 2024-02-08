@@ -114,7 +114,7 @@
                         
                         <h1 class="s-intro__content-title">
                             Identidade visual<br>
-                            Desenvolvemos de sites<br>
+                            Desenvolvimento de sites<br>
                             Marketing Digital<br>
                         </h1>
 
