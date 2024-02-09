@@ -19,6 +19,7 @@ return [
     'central_domains' => [
         'webprosites.com.br',
         'www.webprosites.com.br',
+        'mail.webprosites.com.br',
     ],
 
     /**
